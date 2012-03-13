@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/hibernate-cglib-repack-2.1_3.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/javassist-3.4.GA.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/log4j.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/slf4j-api-1.5.2.jar"/>
+	<classpathentry kind="lib" path="F:/Java/libs/JPAlib/slf4j-log4j12.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
