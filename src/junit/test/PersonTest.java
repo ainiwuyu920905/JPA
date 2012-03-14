@@ -4,6 +4,7 @@ package junit.test;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -66,6 +67,32 @@ public class PersonTest {
 		entityManager.getTransaction().begin();
 		Person person = entityManager.getReference(Person.class,1);
 		entityManager.remove(person);
+		entityManager.getTransaction().commit();
+		entityManager.close();
+		factory.close();
+	}
+	
+	@Test
+	public void query(){
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistences");
+		EntityManager entityManager = factory.createEntityManager();
+		Query query = entityManager.createQuery("select p from Person p where p.id=?1");
+		query.setParameter(1,1);
+		Person person = (Person)query.getSingleResult();
+		System.out.println(person.getName());
+		entityManager.close();
+		factory.close();
+	}
+	
+	@Test
+	public void updateQuery(){
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistences");
+		EntityManager entityManager = factory.createEntityManager();
+		entityManager.getTransaction().begin();
+		Query query = entityManager.createQuery("update Person p set p.name=:name where p.id=:id");
+		query.setParameter("name","老泥");
+		query.setParameter("id",1);
+		query.executeUpdate();
 		entityManager.getTransaction().commit();
 		entityManager.close();
 		factory.close();
